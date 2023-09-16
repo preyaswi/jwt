@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edituser</title>
+</head>
+<body>
+    <form action="/admin/updateuser/{{.Users.Id}}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ .Users.Name }}">
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" value="{{ .Users.Email }}">
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" value="{{ .Users.Password }}">
+        <button type="submit" >Update</button>
+    </form>
+</body>
+</html>
